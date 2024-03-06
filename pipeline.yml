@@ -1,0 +1,27 @@
+pr:
+- main
+
+resources:
+  repositories:
+  - repository: 1esPipelines
+    type: git
+    name: Domino/1ESPipelines
+    ref: dev/katydecorah/2142382-tagging
+    #ref: refs/tags/release
+
+extends:
+  template: v1/1ES.Unofficial.PipelineTemplate.yml@1esPipelines
+  parameters:
+    settings:
+        skipBuildTagsForGitHubPullRequests: true
+    pool:
+      name: $(PoolName)
+      image: $(PoolImage)
+      os: windows
+
+    stages:
+    - stage: Stage
+      jobs:
+      - job: job
+        steps:
+        - powershell: echo "Hello World from host"
