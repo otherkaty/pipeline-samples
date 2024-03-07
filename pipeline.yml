@@ -6,7 +6,7 @@ resources:
   - repository: 1esPipelines
     type: git
     name: Domino/1ESPipelines
-    ref: dev/katydecorah/2142382-tagging
+    ref: dev/katydecorah/2142382-tagging-part-2
     #ref: refs/tags/release
 
 extends:
