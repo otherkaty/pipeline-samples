@@ -24,4 +24,5 @@ extends:
       jobs:
       - job: job
         steps:
+        - checkout: none
         - powershell: echo "Hello World from host"
