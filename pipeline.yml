@@ -18,7 +18,6 @@ extends:
       name: $(PoolName)
       image: $(PoolImage)
       os: windows
-
     stages:
     - stage: Stage
       jobs:
